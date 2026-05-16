@@ -1,0 +1,23 @@
+// Demonstrates arithmetic, comparison, if/else, and Booleans.
+
+let a = 10;
+let b = 3;
+
+print a + b;        // 13
+print a - b;        //  7
+print a * b;        // 30
+print a / b;        //  3   (integer division)
+print a == b;       // false
+print a < b;        // false
+print b < a;        // true
+
+if (a < 100) {
+    print 1;        // 1
+} else {
+    print 0;
+}
+
+// Nested conditional
+let max = a;
+if (max < b) { max = b; }
+print max;          // 10
