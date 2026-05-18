@@ -8,17 +8,24 @@ tokens → AST → bytecode → VM execution, with each function carrying its
 own `Chunk` (a flat `std::vector<uint8_t>` of instructions plus a small
 per-function constant pool and global-name table).
 
+## Prerequisites
+
+You will need a C++17 compatible compiler (such as `g++` or `clang++`) to build the project.
+No external dependencies or libraries are required.
+
 ## Build
+
+Open your terminal, navigate to the project root directory, and run the following command to compile the single-binary executable:
+
+```bash
+g++ -std=c++17 -O2 main.cpp -o cvmpp
+```
+
+Alternatively, you can build using CMake:
 
 ```bash
 mkdir build && cd build
 cmake .. && cmake --build .
-```
-
-Or a single command, no CMake:
-
-```bash
-g++ -std=c++17 -O2 main.cpp -o cvmpp
 ```
 
 ## Usage
