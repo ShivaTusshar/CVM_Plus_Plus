@@ -1,0 +1,15 @@
+// Block scope: locals declared in `{ }` die at the closing brace.
+
+let x = 1;        // global
+print x;          // 1
+
+{
+    let x = 2;    // shadows the global within this block
+    print x;      // 2
+    {
+        let x = 3;
+        print x;  // 3
+    }
+    print x;      // 2 again — inner x is gone
+}
+print x;          // 1 — global never changed

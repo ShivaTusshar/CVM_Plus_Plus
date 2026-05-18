@@ -1,0 +1,24 @@
+// Two flavours of fibonacci.
+// - fib_rec: naive double-recursion. O(2^n) — slow but tiny.
+// - fib_iter: iterative with a for loop and locals. O(n).
+
+fn fib_rec(n) {
+    if (n < 2) { return n; }
+    return fib_rec(n - 1) + fib_rec(n - 2);
+}
+
+fn fib_iter(n) {
+    let a = 0;
+    let b = 1;
+    for (let i = 0; i < n; i = i + 1) {
+        let t = a + b;
+        a = b;
+        b = t;
+    }
+    return a;
+}
+
+print fib_rec(10);    // 55
+print fib_rec(15);    // 610
+print fib_iter(30);   // 832040
+print fib_iter(50);   // 12586269025

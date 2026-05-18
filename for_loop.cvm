@@ -1,0 +1,19 @@
+// For-loop showcase. The loop variable `i` is a local that lives only
+// for the duration of the loop body (try printing it after — error).
+
+print 0;
+for (let i = 1; i < 6; i = i + 1) {
+    print i;     // 1 2 3 4 5
+}
+
+// Nested loops and locals in inner scope.
+for (let r = 1; r < 4; r = r + 1) {
+    for (let c = 1; c < 4; c = c + 1) {
+        print r * 10 + c;   // 11 12 13 21 22 23 31 32 33
+    }
+}
+
+// Reverse counting using a negative step.
+for (let i = 5; 0 < i; i = i - 1) {
+    print i;     // 5 4 3 2 1
+}

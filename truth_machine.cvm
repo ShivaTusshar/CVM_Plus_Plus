@@ -1,0 +1,15 @@
+// Truth Machine
+// Input 0 -> Prints 0 and halts
+// Input 1 -> Prints 1 infinitely
+
+let n = input;
+
+if (n == 0) {
+    print 0;
+} else {
+    if (n == 1) {
+        while (true) {
+            print 1;
+        }
+    }
+}

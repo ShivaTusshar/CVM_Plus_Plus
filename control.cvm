@@ -1,0 +1,24 @@
+// break, continue, and short-circuit && / ||.
+
+// `break` — stop at the first multiple of 7 beyond 20.
+let n = 1;
+while (true) {
+    if (20 < n && (n / 7) * 7 == n) { break; }
+    n = n + 1;
+}
+print n;   // 21
+
+// `continue` — print only odd numbers 1..9.
+for (let i = 1; i < 10; i = i + 1) {
+    if ((i / 2) * 2 == i) { continue; }   // even → skip
+    print i;                              // 1 3 5 7 9
+}
+
+// Short-circuit && — second operand NOT evaluated if first is false.
+// Here `0 < x` is false, so `x / 0` (which would divide by zero) is skipped.
+let x = -1;
+if (0 < x && 100 / x == 50) { print 1; } else { print 0; }   // 0
+
+// Short-circuit || — second operand NOT evaluated if first is true.
+let ok = true;
+if (ok || 1 / 0 == 0) { print 1; }                            // 1
