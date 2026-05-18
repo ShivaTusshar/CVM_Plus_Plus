@@ -42,7 +42,7 @@ cd ..
 
 ```bash
 cd ..
-./build/cvmpp --debug fizzbuzz.cvm.     #disassemble bytecode and rawbytecode, then run a script after cmake
+./build/cvmpp --debug fizzbuzz.cvm.     #disassemble bytecode and rawbytecode, then run a script after CMake
 ```
 
 ## Language
