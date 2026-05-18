@@ -30,11 +30,15 @@ g++ -std=c++17 -O2 main.cpp -o cvmpp
 ./cvmpp fizzbuzz.cvm        # run a script
 ```
 ```bash
-./cvmpp --debug factorial.cvm   # disassemble bytecode, then run
+./cvmpp --debug factorial.cvm   # disassemble bytecode and and rawbytecode, then run
 ```
 ```bash
 cd ..
 ./build/cvmpp fizzbuzz.cvm.     #run a script after cmake
+```
+```bash
+cd ..
+./build/cvmpp --debug fizzbuzz.cvm.     #disassemble bytecode and rawbytecode, then run a script after cmake
 ```
 
 ## Language
